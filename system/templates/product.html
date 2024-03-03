@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <script src="https://kit.fontawesome.com/ab6e9cb896.js" crossorigin="anonymous"></script>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width-device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Products</title>
+    </head>
+    <body>
+        {% for product in products %}
+        
+        <h1>
+            {{product}}
+        </h1>
+        <span>
+            Автор:{{product.author}}, 
+            Дата и время старта: {{product.start_time}}, 
+            Стоимость: {{product.cost}}, 
+            Минимальное количество людей в группе: {{product.min_group}},
+            Максимальное количество лдей в группе: {{product.max_group}}
+        </span>
+        Количество уроков: 
+        <span>{{product.lesson_count}}</span>
+
+        {% endfor %}
+    
+
+    </body>
+</html>
